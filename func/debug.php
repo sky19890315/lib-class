@@ -15,18 +15,38 @@ function debug($var = null,$dump = true, $exit = true)
 	}else {
 
 		if (is_array($var)) {
+			echo "程序输出结果为：";
+			echo "<br/>";
+			?>
+		<div style="background-color:darkkhaki;width: 400px;height: 120px" >
+
+
+<?php
 			print_r($var);
+			?>
+
+		</div>
+
+<?php
+			echo "<br/>";
 			if ($exit) {
+				echo "程序已退出";
 				exit;
 			}
 		} else {
 
 			if ($dump) {
 				echo "输出结果为：";
-				echo "<hr/>";
+				?>
+				<div style="background-color:darkkhaki;width: 400px;height: 120px" >
+
+<?php
 				var_dump($var);
-				echo "<hr/>";
-				echo "<br/>";
+				?>
+
+				</div>
+
+				<?php
 				echo "输出结束！";
 			}
 			if ($exit) {
