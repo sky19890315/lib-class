@@ -1,6 +1,20 @@
 <?php
-require_once "func/debug.php";
+/**
+ *
+ */
+class test {
+	function getArg() {
+		$args = func_get_args();
+		foreach ($args as $key => $value) {
+			echo "参数" . ($key + 1) . ":$value\n";
+		}
+	}
+	function getGlob($fileName) {
+		$files = glob($fileName);
+		print_r($files);
+	}
 
-//$var = array(1,2,4,5,7,8);
-$var = "黑暗的世界";
-debug($var);
+}
+
+$oTest = new test;
+echo uniqid();

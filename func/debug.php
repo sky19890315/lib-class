@@ -5,6 +5,12 @@
  * Date: 2017/5/22
  * Time: 上午12:38
  */
+
+/**
+ * @param null $var 需要传入的值
+ * @param bool $dump 默认打印
+ * @param bool $exit 默认退出程序
+ */
 function debug($var = null,$dump = true, $exit = true)
 {
 	if ($var === null){
@@ -16,7 +22,6 @@ function debug($var = null,$dump = true, $exit = true)
 
 		if (is_array($var)) {
 			echo "程序输出结果为：";
-			echo "<br/>";
 			?>
 		<div style="background-color:darkkhaki;width: 400px;height: 120px" >
 
@@ -28,7 +33,6 @@ function debug($var = null,$dump = true, $exit = true)
 		</div>
 
 <?php
-			echo "<br/>";
 			if ($exit) {
 				echo "程序已退出";
 				exit;

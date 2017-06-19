@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="sky@127.0.0.1">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.2">
+    <root id="1"/>
+    <schema id="2" parent="1" name="sky">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="bcms"/>
+    <schema id="4" parent="1" name="blog"/>
+    <schema id="5" parent="1" name="demosky"/>
+    <schema id="6" parent="1" name="demo_tpshop5"/>
+    <schema id="7" parent="1" name="dgg_lottery"/>
+    <schema id="8" parent="1" name="information_schema"/>
+    <schema id="9" parent="1" name="invo"/>
+    <schema id="10" parent="1" name="laravel1"/>
+    <schema id="11" parent="1" name="mipcms"/>
+    <schema id="12" parent="1" name="mysql"/>
+    <schema id="13" parent="1" name="performance_schema"/>
+    <schema id="14" parent="1" name="sunkeyi"/>
+    <schema id="15" parent="1" name="sys"/>
+    <schema id="16" parent="1" name="testtp5"/>
+    <schema id="17" parent="1" name="thinkcmf"/>
+    <schema id="18" parent="1" name="vokuro"/>
+    <schema id="19" parent="1" name="wp_local"/>
+    <schema id="20" parent="1" name="yii"/>
+    <table id="21" parent="2" name="atest"/>
+    <table id="22" parent="2" name="deeploo">
+      <Comment>无限极分类</Comment>
+    </table>
+    <table id="23" parent="2" name="test"/>
+    <column id="24" parent="21" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="25" parent="21" name="test">
+      <Position>2</Position>
+      <DataType>char(30)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;connect successfully!&apos;</DefaultExpression>
+    </column>
+    <key id="26" parent="21" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="27" parent="22" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="28" parent="22" name="pid">
+      <Position>2</Position>
+      <Comment>父id</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="29" parent="22" name="catename">
+      <Position>3</Position>
+      <Comment>分类名</Comment>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="30" parent="22" name="cateorder">
+      <Position>4</Position>
+      <Comment>排序</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="31" parent="22" name="createtime">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <index id="32" parent="22" name="deeploo_id_uindex">
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="33" parent="22" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="34" parent="22" name="deeploo_id_uindex">
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>deeploo_id_uindex</UnderlyingIndexName>
+    </key>
+    <column id="35" parent="23" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="36" parent="23" name="test">
+      <Position>2</Position>
+      <DataType>char(30)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;connect successfully!&apos;</DefaultExpression>
+    </column>
+    <key id="37" parent="23" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
