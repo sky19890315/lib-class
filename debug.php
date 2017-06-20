@@ -20,28 +20,38 @@ function debug($val){
 
 	//数组
 	if (is_array($val)){
-			echo $debugResult;
+			echo "数组--".$debugResult;
 			print_r($val);
-			echo "<hr/>";
-		debug_zval_dump($val);
-		echo "<hr/>";
-		debug_print_backtrace();
-		exit;
 	}
 	//字符串
 	if (is_string($val)){
 
-			echo $debugResult;
+			echo "字符串--".$debugResult;
 			var_dump($val);
-		echo "<hr/>";
-		debug_zval_dump($val);
-		echo "<hr/>";
-		debug_print_backtrace();
-			exit;
 	}
+	//对象
+	if (is_object($val)){
+		echo "对象--".$debugResult;
+		var_dump($val);
+	}//其他
+	//资源
+	if (is_resource($val)){
+		echo "资源--".$debugResult;
+		var_dump($val);
+	}
+	else{
+		echo "其他类型--".$debugResult;
+		var_dump($val);
+	}
+	echo "<hr/>";
+	debug_zval_dump($val);
+	echo "<hr/>";
+	debug_print_backtrace();
+	exit;
+
 
 
 }
+$dir ='./index.php';
 
-$str = 'abc';
-debug($str);
+debug($dir);
