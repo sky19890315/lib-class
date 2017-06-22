@@ -1,12 +1,5 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: sunkeyi
- * Date: 2017/6/19
- * Time: 下午11:01
- */
-
-/**
  * @param $val
  * @param $onDebug
  * @return bool
